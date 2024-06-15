@@ -15,10 +15,10 @@ export class Employee {
     positionName: string
 
     @Column("int", { nullable: true})
-    parentId: number;
+    parentId: number | null;
 
     @ManyToOne(() => Employee, (employee) => employee.id, {onDelete: 'CASCADE'})
-    @JoinColumn({ name: "parentId" })
+    @JoinColumn({ name: "parentId"})
     parent: Employee
 
     @OneToMany(() => Employee, (employee) => employee.parent, {cascade: true})

@@ -16,7 +16,8 @@
     "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert -d src/db/typeORM.ts",
     "migration:show": "npm run typeorm migration:show -- -d src/db/typeORM.ts",
     "migration:generate": "npm run typeorm migration:generate -- -d src/db/typeORM.ts",
-    "migration:create": "npm run typeorm migration:create"
+    "migration:create": "npm run typeorm migration:create",
+    "seeds": "ts-node src/db/seeds/employeeSeeds.ts"
   },
   "repository": {
     "type": "git",
