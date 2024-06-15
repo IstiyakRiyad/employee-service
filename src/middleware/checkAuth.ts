@@ -23,10 +23,7 @@ export const checkAuth = (roles?: RoleValues[]) => {
         try {
             const { authorization } = req.headers;
 
-            if(!authorization) {
-                if(roles?.length) throw new NotAuthorizedError('Authorization code required');
-                return next();
-            }
+            if(!authorization) throw new NotAuthorizedError('Authorization code required');
 
             const token = authorization.split(' ');
 

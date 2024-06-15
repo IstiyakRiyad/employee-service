@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, JoinColumn, ManyToOne } from "typeorm"
 
 @Entity()
 export class Employee {
@@ -14,7 +14,11 @@ export class Employee {
     @Column()
     positionName: string
 
+    @Column("int", { nullable: true})
+    parentId: number;
+
     @ManyToOne(() => Employee, (employee) => employee.id, {onDelete: 'CASCADE'})
+    @JoinColumn({ name: "parentId" })
     parent: Employee
 
     @OneToMany(() => Employee, (employee) => employee.parent, {cascade: true})

@@ -22,7 +22,8 @@
   },
   "exclude": [
     "genKeyPair.ts",
-    "jest.config.ts"
+    "jest.config.ts",
+    "setup.ts"
   ]
 }
 

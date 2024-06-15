@@ -55,7 +55,7 @@ class LogManager {
             );
         }
         else {
-            console.log('Production config file not found');
+            console.log('Loggly config not found');
         }
     }
 
