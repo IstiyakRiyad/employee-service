@@ -17,13 +17,14 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
     "strictPropertyInitialization": false
   },
   "exclude": [
     "genKeyPair.ts",
     "jest.config.ts",
-    "setup.ts"
+    "setup.ts",
+    "cypress.config.ts",
+    "test"
   ]
 }
 
