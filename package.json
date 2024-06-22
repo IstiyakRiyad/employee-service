@@ -17,7 +17,9 @@
     "migration:show": "npm run typeorm migration:show -- -d src/db/typeORM.ts",
     "migration:generate": "npm run typeorm migration:generate -- -d src/db/typeORM.ts",
     "migration:create": "npm run typeorm migration:create",
-    "seeds": "ts-node src/db/seeds/employeeSeeds.ts"
+    "seeds": "ts-node src/db/seeds/employeeSeeds.ts",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open"
   },
   "repository": {
     "type": "git",

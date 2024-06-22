@@ -9,4 +9,5 @@ export default defineConfig({
     supportFile: false,
     specPattern: "test/e2e/**/*.cy.{js,jsx,ts,tsx}"
   },
+  screenshotsFolder: "test/screenshots"
 });
